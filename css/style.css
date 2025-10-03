@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card img{
+  width: 100%;
+}
+
+/* fonts */
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+}
+
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* header */
+
+header{
+  background-color: #f3f3f3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cart-badge{
+    background-color: #A7897B;
+    position: absolute;
+    width: 25px;
+    aspect-ratio: 1/1;
+    top: -25%;
+    font-size: 15px;
+    color: aliceblue;
+    right: -50%;
+}
+
+/* card */
+.productCard{
+  margin-top: 100px;
+}
+
+.card{
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s;
+}
+.cardThumbnail{  
+  background-color: #e4d2d2;
+}
+
+.product-description{
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;         
+  overflow: hidden;  
+  text-overflow: clip;
+}
+
+.add-to-cart-btn , .product-detail-button , .view-product-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3f3f3;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.product-buttons{
+  right: 5%;
+  top:15% ;
+  visibility: hidden;
+  opacity:0;
+  transition: all 0.5s;
+}
+
+.card:hover .product-buttons{
+  top:20% ;
+  visibility: visible;
+  opacity: 1;
+
+}
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  scale: 1.01;
+}
+/* modal */
+
+.my-modal{
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+.modal-cart-btn{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+.modal-thumbnail{
+  background-color: #e4d2d2;
+}
