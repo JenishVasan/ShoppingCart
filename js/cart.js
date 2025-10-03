@@ -16,7 +16,7 @@ let cartProductsRender = () => {
 
   cartProducts.forEach(cartItem => {
     let product = allProducts.find(product => product.id == cartItem.id);
-
+    let total = cartItem.price * cartItem.Quantity
     if (product) {
       let addProduct = document.createElement("tr");
       addProduct.classList.add('rounded-4')
@@ -29,7 +29,7 @@ let cartProductsRender = () => {
            <span> ${cartItem.Quantity}</span>
           <span class="btn border border-dark rounded-circle " style="width: 30px; height: 30px; padding: 0;" onclick="incQty(${cartItem.id})">+</span>
         </td>
-        <td class="col-2">$${cartItem.price * cartItem.Quantity}</td>
+        <td class="col-2">$${total.toFixed(2)}</td>
         <td class="col-2">
           <span class="fs-5" onclick="cartRemove(${cartItem.id})"><i class="bi bi-trash3-fill"></i></span>
         </td>
@@ -37,17 +37,17 @@ let cartProductsRender = () => {
       cartContainer.appendChild(addProduct);
       cartUpdate()
       subtotalCount()
+      discountCount()
+      finalTotal()
     }
   });
 };
 subtotalCount()
+
 cartProductsRender();
 
 
-
-
-//cart items update
-
+//cart items number update
 function cartUpdate(){
   let cartProducts = JSON.parse(localStorage.getItem('cart'))
   let cartBadge = document.querySelector('.cart-badge')
@@ -86,7 +86,35 @@ const cartRemove = (id) => {
 
 //count subtotal
 function subtotalCount(){
-  let subtotal = document.querySelector('.subtotal');
+  let sTotal = document.querySelector('.subtotal');
   let cartProducts = JSON.parse(localStorage.getItem('cart')) || []
-  subtotal.innerText = `Total: $${cartProducts.reduce((acc, item) => acc + item.price * item.Quantity, 0)}`;
+  let subTotal = cartProducts.reduce((acc, item) => acc + item.price * item.Quantity, 0)
+  sTotal.innerText = `Total: $${subTotal.toFixed(2)}`;
+  return subTotal ;
+}
+
+// count total with display
+function discountCount(){
+  let discount ;
+  let discountTxt = document.querySelector('.discount-txt')
+  let discountPer = 0 ;
+  if(subtotalCount() > 500){
+    discountPer = 5 ;
+  }
+  discount = subtotalCount()*discountPer /100
+  console.log('Discount is Rs.',discount.toFixed(2))
+  discountTxt.innerHTML = `${discountPer}%` 
+  return discount ;
+} 
+
+//fianl total
+function finalTotal(){
+  let Grand_total;
+  if(discountCount()){
+   Grand_total =  subtotalCount()-discountCount()
+  }else{
+    Grand_total = subtotalCount().toFixed(2)
+  }
+  // document.querySelector('.substract-discount').innerHTML = `-${discountCount().toFixed(2)}`
+  document.querySelector('.grand-total').innerHTML =  `Rs.${Grand_total.toFixed(2)}`
 }

@@ -70,30 +70,37 @@
                 <table id="Cart-items-container" class="table align-middle">
                 </table>
             </div>
-            <div class="col-lg-4  bottom-0">
-              <div class="position-sticky top-0">
+            <!-- summary -->
+            <div class="col-lg-4 Summary ">
+              <div class="position-sticky border border-dark rounded-4" style="top:100px">
                 <div class="card border-0 shadow-sm rounded-4">
                     <div class="card-body p-4">
                         <h5 class="card-title text-uppercase fw-bold mb-4">Cart Summary</h5>
                         <div class="d-flex justify-content-between mb-3">
-                            <span class="text-muted">Subtotal</span>
+                            <span class="text-muted fw-semibold">Subtotal</span>
                             <span class="fw-bold subtotal">$0.00</span>
-                        </div>
+                        </div> <hr>
                         <div class="d-flex justify-content-between mb-3">
-                            <span class="text-muted">Shipping</span>
-                            <span class="fw-bold">Free</span>
+                            <span class="text-muted fw-semibold ">Discount</span>
+                            <span class="fw-bold discount-txt">5%</span>
+                        </div> <hr>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted fw-semibold">Shipping</span>
+                            <span class="fw-bold ">Free</span>
                         </div>
                         <hr>
-                        <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
-                            <span>Total</span>
-                            <span class="subtotal">$0.00</span>
+                        <div class="d-flex justify-content-between fs-5 mb-4">
+                            <span class="fw-bold">Total</span>
+                            <div >
+                              <span class="grand-total fw-bold">Rs.0.00</span>
+                              <!-- <p class="text-end substract-discount fw "></p> -->
+                            </div>
                         </div>
                         <div class="d-grid">
                             <button class="btn btn-dark btn-lg text-uppercase">Proceed to Checkout</button>
                         </div>
                     </div>
                 </div>
-                
               </div>
             </div>
         </div>

@@ -1839,6 +1839,24 @@ const cartHandler = (id) => {
 
 // modal
 
+const generateStarRating = (rating) => {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+  const emptyStars = 5 - fullStars - halfStar;
+  let starsHTML = '';
+
+  for (let i = 0; i < fullStars; i++) {
+    starsHTML += '<i class="bi bi-star-fill text-warning"></i>';
+  }
+  if (halfStar) {
+    starsHTML += '<i class="bi bi-star-half text-warning"></i>';
+  }
+  for (let i = 0; i < emptyStars; i++) {
+    starsHTML += '<i class="bi bi-star text-warning"></i>';
+  }
+  return starsHTML;
+};
+
 let modal = document.querySelector(".my-modal");
 
 const Openmodal = (id) => {
@@ -1858,6 +1876,7 @@ const Openmodal = (id) => {
                     <p ><span class="fw-bold">Brand: </span> ${product.brand}</p>
                     <p ><span class="fw-bold">Category:</span> ${product.category}</p>
                     <p ><span class="fw-bold">Rating: </span><span class="text-warning"><i class="bi bi-star-fill ms-2 "></i><i class="bi bi-star-fill ms-2"></i><i class="bi bi-star-fill ms-2"></i><i class="bi bi-star-fill ms-2"></i><i class="bi bi-star-fill ms-2"></i></></p>
+                    <p><span class="fw-bold">Rating: </span><span class="ms-2">${generateStarRating(product.rating)}</span> (${product.rating})</p>
                     <p class="fs-4 fw-bold text-success mb-2">$${product.price}</p>
                     <div class="d-flex gap-2">
                         <button class=" modal-cart-btn " onclick="cartHandler(${product.id}); modelHandler();">Add to Cart</button>
