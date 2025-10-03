@@ -15,4 +15,4 @@ This is a JavaScript Shopping Cart project with the following features:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/JenishVasan/Shopping-Cart.git
+   git clone https://github.com/JenishVasan/ShoppingCart.git
