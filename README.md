@@ -6,9 +6,9 @@ This is a JavaScript Shopping Cart project with the following features:
 - Increment / decrement quantity
 - View product details in modal
 - Local storage integration
+- Discount according to Total
 
 ## Screenshots
-
 
 
 ## How to Run
