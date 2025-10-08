@@ -66,43 +66,11 @@ ShoppingCart/
 └── assets/
 ```
 
----
-
-## 🧾 Features in Code
-
-* **ProductCardRender()** → Dynamically displays all products on homepage.
-* **cartHandler()** → Adds products to cart (with duplicate protection).
-* **incQty() / decQty()** → Handles quantity increase/decrease.
-* **subtotalCount(), discountCount(), finalTotal()** → Calculate totals and discounts dynamically.
-* **Openmodal() / modelHandler()** → Displays product detail modal.
-
----
-
-
 ## 🧑‍💻 Author
 
 **👤 Jenish Vasan**
-Full-Stack Developer | MERN Stack | Video Editor
+Full-Stack Developer | MERN Stack
 📍 [GitHub Profile](https://github.com/JenishVasan)
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-If you’d like to improve this project:
-
-1. Fork the repo
-2. Create a new branch (`feature/new-feature`)
-3. Commit changes
-4. Submit a Pull Request 🚀
-
----
-
-## 📜 License
-
-This project is open source and available under the **MIT License**.
-
----
-
-Would you like me to make this version ready to **copy-paste directly into your `README.md`** (with proper Markdown formatting and spacing for GitHub)?
