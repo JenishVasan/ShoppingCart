@@ -78,39 +78,6 @@ ShoppingCart/
 
 ---
 
-## 🧱 Future Updates (Planned)
-
-✅ **1. Search & Filter Products**
-➡️ Add a search bar and category filters for faster browsing.
-
-✅ **2. Responsive Mobile UI**
-➡️ Optimize the design for small screens using Bootstrap Grid.
-
-✅ **3. Checkout Page with Order Summary**
-➡️ Include order confirmation and payment simulation.
-
-✅ **4. Coupon / Promo Code System**
-➡️ Apply additional discounts using coupons.
-
-✅ **5. Wishlist Feature**
-➡️ Allow users to save favorite products for later.
-
-✅ **6. Product Sorting**
-➡️ Sort products by price, rating, or category.
-
-✅ **7. Toast Notifications**
-➡️ Add visual feedback when adding/removing items.
-
-✅ **8. Backend Integration (Future)**
-➡️ Connect to a real database (MongoDB / Firebase) for persistent data storage.
-
-✅ **9. User Authentication (Login/Signup)**
-➡️ Secure user-specific cart and order data.
-
-✅ **10. Dark / Light Mode Toggle**
-➡️ Improve UI flexibility with theme options.
-
----
 
 ## 🧑‍💻 Author
 
