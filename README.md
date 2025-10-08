@@ -1,4 +1,3 @@
-Here’s an upgraded and complete **README.md** file for your **Shopping Cart Project**, including your existing details and adding structured documentation, technology stack, future updates, and contribution guidelines 👇
 
 ---
 
