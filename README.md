@@ -35,15 +35,6 @@ It uses **Local Storage** for persistence and supports **real-time updates** for
 
 **🛒 Cart Page** <br> <img width="1900" height="977" alt="Screenshot 2025-10-07 173248" src="https://github.com/user-attachments/assets/23e201db-f73b-4294-a9b7-f4f7c9b2dc12" />
 
----
-
-## ⚙️ How to Run Locally
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/JenishVasan/ShoppingCart.git
-   ```
 
 2. Open the folder in your code editor (like VS Code).
 
